@@ -1,0 +1,349 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  caret-color: rgb(199, 65, 16); 
+  margin: 0;
+  font-family: 'Inter' , sans-serif;
+}
+header{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 4px #a1cde7;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+header>img{
+  width: 3.6rem;
+  height: auto;
+  margin-right: .5rem;
+   
+}
+header>span{
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 3.2rem;
+letter-spacing: -5%;
+}
+
+main{
+padding-top: 1.2rem; 
+display: flex;
+flex-direction: column;
+align-items: center; 
+}
+.about>h3{
+margin: 0;
+color:#0a029d;
+}
+.about{
+font-size: .8rem;
+text-align: center;
+color:rgb(16, 16, 16);
+padding: 1rem;
+opacity: .8;
+margin-bottom: .6rem;   
+}
+.about:hover{
+  color: black;
+  opacity: 1;
+}
+
+input{
+width: 300px;
+height: 38px;
+border-radius: 6px;
+border-width: 1px;
+padding: 9px 13px;
+margin-right: 6px;
+}
+button{
+color: white;
+background-color: #05014d;
+width: 183px;
+height: 38px;
+border-radius: 6px;
+cursor: pointer; 
+}
+button:hover{
+  background-color:#05014de7 ;
+}
+.error-message {
+  color: rgb(199, 31, 16);
+  padding: 0.6rem 1rem;
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+ /* background-color: rgb(199, 31, 16);*/
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0.9;
+  border-radius: 10px;
+  line-height: 1.4;
+  animation: fade-in-error 0.3s ease-in-out;
+  
+}
+@keyframes fade-in-error {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+section{
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1rem;
+  justify-content: center;
+  flex-direction: column;
+}
+h2{
+  margin-bottom: .5rem;
+}
+
+.reset-btn {
+  background-color: transparent;
+  color: rgb(9, 4, 109);
+  margin-bottom: .5rem;
+  display: flex;
+  border: none;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-weight: bold;
+  line-height: 1rem;
+  letter-spacing: .5px;
+  height: fit-content;
+  padding: .5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  opacity: .8;
+  transition: all .2s ease-in-out;
+}
+.reset-btn:hover {
+  background-color: rgb(16, 104, 144);
+  color: white;
+  opacity: 1;
+  box-shadow: 0px 1px 5px black;
+}
+.reset-btn:disabled{
+  opacity: .3;
+  cursor: none;
+}
+.reset-btn:disabled:hover{
+  background-color: transparent;
+  box-shadow: none;
+  color: rgb(9, 4, 109);
+}
+.reset-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:.2rem;
+}
+
+.hint-text {
+  margin-top: 0;
+  font-size: 1rem;
+  color: rgb(199, 31, 16);
+  font-style: italic;
+  opacity: 0.8;
+}
+.hint-text>span{
+  color: black;
+  opacity: 0.7;
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  display: inline-block; 
+  animation: fade-in 0.3s ease-in-out;
+}
+@keyframes fade-in {
+  from
+  { 
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to{
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+.ingredients-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+ul.ingredients-list {
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+ul.ingredients-list > li {
+    color: #45546b;
+    line-height: 1.5rem;
+    font-size: 1.05rem;
+}
+.listcontents{
+width: 100%;
+display: flex;
+justify-content: space-between;
+list-style-type: disc;
+}
+.remove{
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.497);
+  padding:.1rem .5rem ;
+  width: fit-content;
+  height: fit-content;
+  color: black;
+
+}
+.remove:hover{
+  color: white;
+}
+
+.error{
+   outline: 1px solid rgb(199, 65, 16);
+   box-shadow: 1px 1px 10px rgb(251, 137, 137);
+}
+.get-recipe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .5rem;
+    background: #F0EFEB;
+    padding: 0.7rem 1.75rem;
+}
+.get-recipe-container h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+.get-recipe-container p {
+    color: #5d636e;
+    font-size: 0.875rem;
+    line-height: 20px;
+}
+.get-recipe-container button {
+    border: none;
+    border-radius: 6px;
+    background: rgb(199, 65, 16);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #FAFAF8;
+    padding: 9px 1.05rem;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+.get-recipe-container button:hover{
+  background-color: rgb(219, 82, 32);
+  
+}
+.get-recipe-container button:disabled{
+  cursor: none;
+  opacity: .5;
+  box-shadow: none;
+  background-color: rgb(199, 65, 16);
+}
+.loading-container{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loading-container p{
+  text-transform: capitalize;
+}
+.loading-bars {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.loading-bars span {
+  width: 6px;
+  border-radius: 2px;
+  height: 24px;
+  background: rgb(16, 104, 144);
+  animation: bounce 0.6s infinite ease-in-out alternate;
+}
+@keyframes bounce {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(1.5); }
+}
+.loading-bars span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading-bars span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.suggested-recipe-container {
+    color: #475467;
+    line-height: 28px;   
+    font-size: 1.125rem;
+    font-weight: 400;
+  
+}
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+    margin-bottom: 5px;
+    margin-top: 0;
+     
+}
+.suggested-recipe-container h1,.suggested-recipe-container h2{
+   overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  line-height: 1.3;
+  font-size:2rem;
+}
+::selection{
+  background-color: rgb(199, 65, 16);
+   
+  color: white;
+}
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: .8rem;
+  height: .8rem;
+  
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(199, 65, 16); 
+  border: 2px solid black;
+  border-radius: 10px;
+}
+ 
+
+@media (max-width:600px) {
+  .inputField{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .inputField>button{
+    margin-top: 5px;
+  }
+  section{
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+
+
+
+
+
+
+ 
